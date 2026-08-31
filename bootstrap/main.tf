@@ -46,3 +46,18 @@ resource "aws_s3_bucket_ownership_controls" "terraform_state" {
     object_ownership = "BucketOwnerEnforced"
   }
 }
+
+resource "aws_s3_bucket_lifecycle_configuration" "terraform_state" {
+  bucket = aws_s3_bucket.terraform_state.id
+
+  rule {
+    id     = "abort-incomplete-multipart-uploads"
+    status = "Enabled"
+
+    filter {}
+
+    abort_incomplete_multipart_upload {
+      days_after_initiation = 7
+    }
+  }
+}
