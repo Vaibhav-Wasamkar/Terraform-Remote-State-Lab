@@ -1,1 +1,2 @@
-aws_region = "ap-south-1"
+aws_region        = "ap-south-1"
+state_bucket_name = "YOUR_UNIQUE_BUCKET_NAME"
