@@ -9,7 +9,7 @@ resource "aws_instance" "example" {
   tags = {
     Name        = "Remote State Lab Instance"
     Environment = "Lab"
-    Purpose     = "Terraform Remote State Demonstration"
+    Purpose     = "Terraform Remote State Demonstration - Test State Lock"
     ManagedBy   = "Terraform"
   }
 }
