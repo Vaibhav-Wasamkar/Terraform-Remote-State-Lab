@@ -10,5 +10,6 @@ resource "aws_instance" "example" {
     Name        = "Remote State Lab Instance"
     Environment = "Lab"
     Purpose     = "Terraform Remote State Demonstration"
+    ManagedBy   = "Terraform"
   }
 }
